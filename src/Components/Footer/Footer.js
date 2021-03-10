@@ -13,9 +13,9 @@ const Footer = () => {
            
           
        
-          <a href=""> <FontAwesomeIcon icon={faFutbol}/> </a>
-          <a href=""> <FontAwesomeIcon icon={faBell}/> </a>
-          <a href=""> <FontAwesomeIcon icon={faThumbsUp}/> </a>
+          <a href="https://www.laliga.com/en-GB"> <FontAwesomeIcon icon={faFutbol}/> </a>
+          <a href="https://twitter.com/laliga?lang=en"> <FontAwesomeIcon icon={faBell}/> </a>
+          <a href="https://www.facebook.com/LaLiga"> <FontAwesomeIcon icon={faThumbsUp}/> </a>
            
        </Container>
     );

@@ -32,10 +32,16 @@ const TeamDetail = () => {
 
         //   </Card>
         //     </div>
-
+        
+             
+        
         <div className="container my-5 pt-5">
+            <div>
+             <p>  <img class="mx-auto d-block" src={team.strTeamBadge} alt="" /> </p>
+            </div>
             <div className="row">
-                <div className="col-md-7">
+           
+                <div className="col-sm-6">
                     <img className="img-fluid" src={male} alt="" />
                 </div>
                 {
@@ -48,13 +54,13 @@ const TeamDetail = () => {
                     //     )}
                     // </div>
                 }
-                <div className="col-md-5">
+                <div className="col-sm-6">
 
-                    <p>  <img src={team.strTeamBadge} alt="" /> </p>
+                   
                     <h3>Country :{team.strCountry}</h3>
 
                     <h3>Sport Type :{team.strSport}</h3>
-                    <h3>Description  : {team.strDescriptionEN}</h3>
+                    <p>Description  : {team.strDescriptionEN}</p>
                     <h3>Gender : {team.strGender}</h3>
 
                 </div>

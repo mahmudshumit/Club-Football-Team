@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 
 const Header = () => {
     return (
+         
         <Navbar bg="light" expand="lg">
         <Navbar.Brand as={Link} to="/home">Club Football Team</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -20,6 +21,7 @@ const Header = () => {
           </Form>
         </Navbar.Collapse>
       </Navbar>
+      
     );
 };
 
