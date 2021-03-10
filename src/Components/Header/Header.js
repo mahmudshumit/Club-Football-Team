@@ -11,7 +11,7 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link  as={Link} to="/home">Home</Nav.Link>
-            <Nav.Link as={Link} to="/about">About</Nav.Link>
+            
           
           </Nav>
           <Form inline>

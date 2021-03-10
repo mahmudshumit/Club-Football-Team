@@ -10,36 +10,40 @@ import {
   Link
 } from "react-router-dom";
 import NoMatch from './Components/NoMatch/NoMatch';
+import TeamDetail from './Components/TeamDetail/TeamDetail';
+import Footer from './Components/Footer/Footer';
 
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Header></Header>
 
-      <div>
-     
+    <Router>
+      <Header></Header>
 
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
 
-          </Route>
-          <Route path="/about">
-          
-          </Route>
-          <Route path="*">
+
+
+      <Switch>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+        <Route path="/home">
+          <Home></Home>
+
+        </Route>
+        <Route path="/team/:teamId">
+          <TeamDetail></TeamDetail>
+
+        </Route>
+        <Route path="*">
           <NoMatch></NoMatch>
-          </Route>
-         
-        </Switch>
-      </div>
+        </Route>
+
+      </Switch>
+      <Footer></Footer>
+
     </Router>
-    </div>
+
   );
 }
 
