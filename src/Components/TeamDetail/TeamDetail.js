@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import male from '../../Photo/male.png';
+import female from '../../Photo/female.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFlag,faMale ,faFutbol} from '@fortawesome/free-solid-svg-icons'
 
 
 const TeamDetail = () => {
@@ -40,10 +43,11 @@ const TeamDetail = () => {
              <p>  <img class="mx-auto d-block" src={team.strTeamBadge} alt="" /> </p>
             </div>
             <div className="row">
-           
+                
+{/*            
                 <div className="col-sm-6">
                     <img className="img-fluid" src={male} alt="" />
-                </div>
+                </div> */}
                 {
                     // <div className="col-md-3">
                     //     {gender && gender=== "male" ? (
@@ -53,15 +57,20 @@ const TeamDetail = () => {
                     //         <img className="img"src={male} alt=""/> 
                     //     )}
                     // </div>
+                    
+                    team.strGender==='Male'? <img className="img-fluid" src={male}  alt=""/>
+                    :  <img className="img-fluid" src={female} alt=""/>
                 }
                 <div className="col-sm-6">
 
                    
-                    <h3>Country :{team.strCountry}</h3>
-
-                    <h3>Sport Type :{team.strSport}</h3>
+                    <h3><FontAwesomeIcon icon={faFlag} />Country Name :{team.strTeam}</h3>
+                    
+                    <h3><FontAwesomeIcon icon={faFutbol} /> Sport Type :{team.strSport}</h3>
+                    <h3><FontAwesomeIcon icon={faMale} />  Gender : {team.strGender}</h3>
                     <p>Description  : {team.strDescriptionEN}</p>
-                    <h3>Gender : {team.strGender}</h3>
+                   
+                    
 
                 </div>
             </div>
