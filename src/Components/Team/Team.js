@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
-import { Link, useHistory } from 'react-router-dom';
+import {  useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
 

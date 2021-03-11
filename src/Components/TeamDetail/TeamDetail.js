@@ -3,7 +3,8 @@ import { useParams } from 'react-router-dom';
 import male from '../../Photo/male.png';
 import female from '../../Photo/female.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFlag,faMale ,faFutbol} from '@fortawesome/free-solid-svg-icons'
+import { faFlag, faMale, faFutbol, faBell, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { Container } from 'react-bootstrap';
 
 
 const TeamDetail = () => {
@@ -16,63 +17,43 @@ const TeamDetail = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setTeam(data.teams[0]))
-    }, [])
+    }, [teamId])
 
 
 
     return (
-        //     <div className="col-md-6 my-6 pt-5">
 
-        //     <Card>
-        //     <Card.Img variant="top" src={image} />
-        //     <Card.Body>
-        //       <Card.Title>{teamId}</Card.Title>
-        //       {/* <Card.Title>{population}</Card.Title>
-        //       <Card.Title>{region}</Card.Title> */}
-
-        //     </Card.Body>
-
-
-        //   </Card>
-        //     </div>
-        
-             
-        
         <div className="container my-5 pt-5">
             <div>
-             <p>  <img class="mx-auto d-block" src={team.strTeamBadge} alt="" /> </p>
+                <p>  <img class="mx-auto d-block" src={team.strTeamBanner} alt="" /> </p>
             </div>
-            <div className="row">
-                
-{/*            
-                <div className="col-sm-6">
-                    <img className="img-fluid" src={male} alt="" />
-                </div> */}
-                {
-                    // <div className="col-md-3">
-                    //     {gender && gender=== "male" ? (
-                    //         <img className="img"src={female} alt=""/>
+            <div>
+                <p>  <img class="mx-auto d-block" src={team.strTeamLogo} alt="" /> </p>
+            </div>
 
-                    //     ) :(
-                    //         <img className="img"src={male} alt=""/> 
-                    //     )}
-                    // </div>
-                    
-                    team.strGender==='Male'? <img className="img-fluid" src={male}  alt=""/>
-                    :  <img className="img-fluid" src={female} alt=""/>
+            <div className="row">
+                {
+
+                    team.strGender === 'Male' ? <img className="img-fluid" src={male} alt="" />
+                        : <img className="img-fluid" src={female} alt="" />
                 }
                 <div className="col-sm-6">
 
-                   
+
                     <h3><FontAwesomeIcon icon={faFlag} />Country Name :{team.strTeam}</h3>
-                    
                     <h3><FontAwesomeIcon icon={faFutbol} /> Sport Type :{team.strSport}</h3>
                     <h3><FontAwesomeIcon icon={faMale} />  Gender : {team.strGender}</h3>
                     <p>Description  : {team.strDescriptionEN}</p>
-                   
-                    
+
+
 
                 </div>
+
+                <Container className="text-center">
+                    <a href={`https://${team.strFacebook}`}> <FontAwesomeIcon icon={faFutbol} /> </a>
+                    <a href={`https://${team.strYoutube}`}> <FontAwesomeIcon icon={faBell} /> </a>
+                    <a href={`https://${team.strTwitter}`}> <FontAwesomeIcon icon={faThumbsUp} /> </a>
+                </Container>
             </div>
         </div>
     );

@@ -11,7 +11,7 @@ import {
 } from "react-router-dom";
 import NoMatch from './Components/NoMatch/NoMatch';
 import TeamDetail from './Components/TeamDetail/TeamDetail';
-import Footer from './Components/Footer/Footer';
+
 
 
 function App() {
@@ -19,10 +19,6 @@ function App() {
 
     <Router>
       <Header></Header>
-
-
-
-
       <Switch>
         <Route exact path="/">
           <Home></Home>
@@ -40,7 +36,7 @@ function App() {
         </Route>
 
       </Switch>
-      <Footer></Footer>
+
 
     </Router>
 
